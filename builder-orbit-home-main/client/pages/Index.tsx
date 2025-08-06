@@ -262,34 +262,132 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-50 mt-5">
-        <div className="container mx-auto px-8 lg:px-16 max-w-4xl text-center">
-          <h2 className="text-energy-dark text-4xl lg:text-5xl font-bold mb-4">
-            Got any Question?
-          </h2>
-          <p className="text-energy-dark text-xl font-semibold mb-8">
-            Reach out to us . Call us at +1 (347) 849-9047
-          </p>
+      <section className="relative py-20 mt-5 overflow-hidden">
+        {/* Modern gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-energy-yellow/5 to-energy-orange/5"></div>
 
-          <form
-            onSubmit={handleContactSubmit}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-energy-yellow"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-energy-dark text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-            >
-              Contact us
-            </button>
-          </form>
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-energy-yellow/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-energy-orange/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+
+        <div className="relative container mx-auto px-8 lg:px-16 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Left side - Contact Info */}
+            <div className="space-y-8">
+              <div>
+                <div className="inline-flex items-center px-4 py-2 bg-energy-yellow/20 rounded-full mb-6">
+                  <span className="text-energy-orange font-semibold">Get In Touch</span>
+                </div>
+                <h2 className="text-5xl lg:text-6xl font-bold text-energy-dark leading-tight mb-6">
+                  Let's Build Something
+                  <span className="text-energy-orange"> Amazing</span> Together
+                </h2>
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  Ready to transform your energy needs? Our team of experts is here to help you harness the power of sustainable solutions.
+                </p>
+              </div>
+
+              {/* Contact methods */}
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/20 shadow-sm">
+                  <div className="w-12 h-12 bg-energy-yellow rounded-xl flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-energy-dark" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-energy-dark">Call us directly</p>
+                    <p className="text-energy-orange font-medium">+1 (347) 849-9047</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/20 shadow-sm">
+                  <div className="w-12 h-12 bg-energy-orange rounded-xl flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-energy-dark">Send us an email</p>
+                    <p className="text-energy-orange font-medium">hello@superenergy.ng</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Modern Form */}
+            <div className="bg-white/80 backdrop-blur-lg rounded-3xl p-8 lg:p-10 shadow-2xl border border-white/30">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-energy-dark mb-2">Start Your Journey</h3>
+                <p className="text-gray-600">Fill out the form below and we'll get back to you within 24 hours.</p>
+              </div>
+
+              <form onSubmit={handleContactSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                    <input
+                      type="text"
+                      placeholder="John"
+                      className="w-full px-4 py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-energy-yellow focus:border-transparent transition-all"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                    <input
+                      type="text"
+                      placeholder="Doe"
+                      className="w-full px-4 py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-energy-yellow focus:border-transparent transition-all"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="john.doe@example.com"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-energy-yellow focus:border-transparent transition-all"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    placeholder="+1 (555) 123-4567"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-energy-yellow focus:border-transparent transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">How can we help you?</label>
+                  <textarea
+                    rows={4}
+                    placeholder="Tell us about your project or questions..."
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-energy-yellow focus:border-transparent transition-all resize-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-energy-yellow to-energy-orange text-energy-dark font-bold py-4 px-6 rounded-xl hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center space-x-2"
+                >
+                  <span>Send Message</span>
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </form>
+
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <p className="text-center text-sm text-gray-500">
+                  By submitting this form, you agree to our privacy policy and terms of service.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
