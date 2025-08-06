@@ -3,14 +3,14 @@
   "outputDirectory": "dist/spa",
   "framework": null,
   "functions": {
-    "netlify/functions/api.ts": {
+    "api/[...path].ts": {
       "runtime": "nodejs18.x"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/netlify/functions/api"
+      "destination": "/api/$1"
     },
     {
       "source": "/(.*)",
