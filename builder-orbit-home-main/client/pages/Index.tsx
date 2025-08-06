@@ -317,8 +317,12 @@ export default function Index() {
           </div>
 
           {/* Project Carousel */}
-          <div className="overflow-hidden" ref={projectEmblaRef}>
-            <div className="flex">
+          <div
+            className="overflow-x-auto scrollbar-hide pb-4"
+            ref={projectCarouselRef}
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="flex space-x-6" style={{ width: 'max-content' }}>
               {[
                 {
                   image: "https://api.builder.io/api/v1/image/assets/TEMP/48bc919086a1514ff55f1eb94121935346dba033?width=615",
