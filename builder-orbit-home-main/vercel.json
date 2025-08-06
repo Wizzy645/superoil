@@ -1,8 +1,16 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/spa",
+  "framework": null,
+  "functions": {
+    "netlify/functions/api.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/$1"
+      "destination": "/netlify/functions/api"
     },
     {
       "source": "/(.*)",
