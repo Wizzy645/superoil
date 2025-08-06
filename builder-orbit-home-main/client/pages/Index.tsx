@@ -119,7 +119,7 @@ export default function Index() {
         <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
           <div className="max-w-2xl">
             <h1 className="text-white text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Welcome <span className="text-energy-orange">To The</span>
+              Welcome <span className="text-white">To The</span>
               <br />
               Super Energy ltd.
             </h1>
