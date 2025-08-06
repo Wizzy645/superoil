@@ -182,7 +182,7 @@ export default function Index() {
                 </div>
 
                 {/* Pipelines Building Card */}
-                <div className="flex-none w-72 mx-3">
+                <div className="flex-none w-72">
                   <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/d335c9a17b2b6891d555bdbd58dfe146dc1ad382?width=749"
@@ -203,7 +203,7 @@ export default function Index() {
                 </div>
 
                 {/* Oil Refinement Card */}
-                <div className="flex-none w-72 mx-3">
+                <div className="flex-none w-72">
                   <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/1db2cc0680337e8a3edbfec599a2945f2bf4d880?width=751"
@@ -224,7 +224,7 @@ export default function Index() {
                 </div>
 
                 {/* Additional Service Cards */}
-                <div className="flex-none w-72 mx-3">
+                <div className="flex-none w-72">
                   <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/917c2e8db40b350608c1932347a054662f563488?width=751"
@@ -242,7 +242,7 @@ export default function Index() {
                   </div>
                 </div>
 
-                <div className="flex-none w-72 mx-3">
+                <div className="flex-none w-72">
                   <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/d335c9a17b2b6891d555bdbd58dfe146dc1ad382?width=749"
