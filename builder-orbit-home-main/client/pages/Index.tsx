@@ -154,8 +154,12 @@ export default function Index() {
         <div className="absolute top-[527px] left-1/2 transform -translate-x-1/2 w-full max-w-6xl px-8 lg:px-16">
           <div className="relative">
             {/* Service Carousel */}
-            <div className="overflow-hidden" ref={serviceEmblaRef}>
-              <div className="flex">
+            <div
+              className="overflow-x-auto scrollbar-hide pb-4"
+              ref={serviceCarouselRef}
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              <div className="flex space-x-6" style={{ width: 'max-content' }}>
                 {/* Oil Extraction Card */}
                 <div className="flex-none w-72 mx-3">
                   <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
