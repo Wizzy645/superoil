@@ -357,7 +357,7 @@ export default function Index() {
               ].map((project, index) => (
                 <div
                   key={index}
-                  className="flex-none w-72 mx-3 lg:w-80"
+                  className="flex-none w-72 lg:w-80"
                 >
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div className="relative overflow-hidden">
