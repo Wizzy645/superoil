@@ -114,7 +114,7 @@ export default function Index() {
   };
 
   // Auto-advance hero slides every 5 seconds
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentHeroSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
