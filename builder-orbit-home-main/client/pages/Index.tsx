@@ -355,14 +355,14 @@ export default function Index() {
         </div>
 
         {/* Pagination Dots */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
-          <div className="w-3 h-3 rounded-full border-2 border-white"></div>
-          <div className="w-3 h-3 rounded-full border-2 border-white"></div>
-          <div className="w-3 h-3 rounded-full border-2 border-white"></div>
-          <div className="w-6 h-6 rounded-full bg-energy-yellow border-2 border-white"></div>
-          <div className="w-3 h-3 rounded-full border-2 border-white"></div>
-          <div className="w-3 h-3 rounded-full border-2 border-white"></div>
-          <div className="w-3 h-3 rounded-full border-2 border-white"></div>
+        <div className="absolute bottom-8 sm:bottom-12 lg:bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 sm:space-x-3">
+          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
+          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
+          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
+          <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 rounded-full bg-energy-yellow border border-white sm:border-2"></div>
+          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
+          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
+          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
         </div>
       </section>
 
