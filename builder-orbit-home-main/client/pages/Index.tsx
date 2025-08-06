@@ -185,7 +185,7 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 bg-energy-dark mt-[290px]">
+      <section id="projects" className="py-16 bg-energy-dark mt-[300px]">
         <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
           <div className="flex items-center mb-12">
             <h2 className="text-white text-4xl font-medium">Our Projects</h2>
@@ -262,7 +262,7 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 mt-5">
         <div className="container mx-auto px-8 lg:px-16 max-w-4xl text-center">
           <h2 className="text-energy-dark text-4xl lg:text-5xl font-bold mb-4">
             Got any Question?
