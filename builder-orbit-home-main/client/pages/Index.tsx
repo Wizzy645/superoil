@@ -18,8 +18,54 @@ import {
 export default function Index() {
   const [email, setEmail] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentHeroSlide, setCurrentHeroSlide] = useState(3); // Default to slide 4 (0-indexed)
   const serviceCarouselRef = useRef<HTMLDivElement>(null);
   const projectCarouselRef = useRef<HTMLDivElement>(null);
+
+  const heroSlides = [
+    {
+      title: "Powering Tomorrow with",
+      highlight: "Clean Energy",
+      description: "Leading the transition to sustainable energy solutions with cutting-edge technology and innovative approaches.",
+      backgroundImage: "https://api.builder.io/api/v1/image/assets/TEMP/203d29105ef71ea84a5836f3c52e99a1b753c426?width=3421"
+    },
+    {
+      title: "Renewable Solutions for",
+      highlight: "Better Future",
+      description: "Harnessing the power of wind, solar, and hydro energy to create a cleaner, more sustainable world.",
+      backgroundImage: "https://api.builder.io/api/v1/image/assets/TEMP/203d29105ef71ea84a5836f3c52e99a1b753c426?width=3421"
+    },
+    {
+      title: "Innovation Meets",
+      highlight: "Sustainability",
+      description: "Combining advanced engineering with environmental responsibility to deliver exceptional energy solutions.",
+      backgroundImage: "https://api.builder.io/api/v1/image/assets/TEMP/203d29105ef71ea84a5836f3c52e99a1b753c426?width=3421"
+    },
+    {
+      title: "Welcome To The",
+      highlight: "Super Energy ltd.",
+      description: "The official plug for all your renewable resourses, made with love with people who knows how - The natives!!!",
+      backgroundImage: "https://api.builder.io/api/v1/image/assets/TEMP/203d29105ef71ea84a5836f3c52e99a1b753c426?width=3421"
+    },
+    {
+      title: "Energy Infrastructure",
+      highlight: "Excellence",
+      description: "Building robust energy networks and pipelines that power communities and drive economic growth.",
+      backgroundImage: "https://api.builder.io/api/v1/image/assets/TEMP/203d29105ef71ea84a5836f3c52e99a1b753c426?width=3421"
+    },
+    {
+      title: "Smart Grid Solutions for",
+      highlight: "Modern World",
+      description: "Implementing intelligent energy distribution systems that optimize efficiency and reduce environmental impact.",
+      backgroundImage: "https://api.builder.io/api/v1/image/assets/TEMP/203d29105ef71ea84a5836f3c52e99a1b753c426?width=3421"
+    },
+    {
+      title: "Oil & Gas Expertise",
+      highlight: "Redefined",
+      description: "Applying decades of industry knowledge with modern sustainable practices for responsible energy extraction.",
+      backgroundImage: "https://api.builder.io/api/v1/image/assets/TEMP/203d29105ef71ea84a5836f3c52e99a1b753c426?width=3421"
+    }
+  ];
 
   const scrollServicePrev = () => {
     if (serviceCarouselRef.current) {
@@ -66,6 +112,15 @@ export default function Index() {
     // Handle contact form submission
     console.log("Contact form submitted:", email);
   };
+
+  // Auto-advance hero slides every 5 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [heroSlides.length]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -185,23 +240,20 @@ export default function Index() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen sm:h-screen flex items-center justify-start bg-cover bg-center"
+        className="relative min-h-screen sm:h-screen flex items-center justify-start bg-cover bg-center transition-all duration-500"
         style={{
           backgroundImage:
-            'linear-gradient(0deg, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), linear-gradient(105deg, rgba(0, 0, 0, 0.50) 41.07%, rgba(0, 0, 0, 0.35) 102.67%), url("https://api.builder.io/api/v1/image/assets/TEMP/203d29105ef71ea84a5836f3c52e99a1b753c426?width=3421")',
+            `linear-gradient(0deg, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), linear-gradient(105deg, rgba(0, 0, 0, 0.50) 41.07%, rgba(0, 0, 0, 0.35) 102.67%), url("${heroSlides[currentHeroSlide].backgroundImage}")`,
         }}
       >
         <div className="container mx-auto px-4 sm:px-8 lg:px-16 max-w-6xl py-16 sm:py-0">
           <div className="max-w-2xl">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-              Welcome <span className="text-white">To The</span>
-              <br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>
-              Super Energy ltd.
+            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 transition-all duration-500">
+              {heroSlides[currentHeroSlide].title}{" "}
+              <span className="text-energy-yellow">{heroSlides[currentHeroSlide].highlight}</span>
             </h1>
-            <p className="text-white text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 leading-relaxed">
-              The official plug for all your renewable resourses, made with love
-              with people who knows how - The natives!!!
+            <p className="text-white text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 leading-relaxed transition-all duration-500">
+              {heroSlides[currentHeroSlide].description}
             </p>
             <button className="flex items-center gap-2 bg-energy-yellow text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-lg sm:text-xl hover:bg-energy-yellow-dark transition-colors shadow-lg">
               Contact us
@@ -356,13 +408,18 @@ export default function Index() {
 
         {/* Pagination Dots */}
         <div className="absolute bottom-8 sm:bottom-12 lg:bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 sm:space-x-3">
-          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
-          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
-          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
-          <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 rounded-full bg-energy-yellow border border-white sm:border-2"></div>
-          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
-          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
-          <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-white sm:border-2"></div>
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentHeroSlide(index)}
+              className={`rounded-full border border-white sm:border-2 transition-all duration-300 hover:scale-110 ${
+                index === currentHeroSlide
+                  ? 'w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 bg-energy-yellow'
+                  : 'w-2 h-2 sm:w-3 sm:h-3 hover:bg-white/20'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
