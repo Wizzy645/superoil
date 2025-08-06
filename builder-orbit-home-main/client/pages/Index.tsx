@@ -1,8 +1,6 @@
-import { useState, useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useState, useRef } from "react";
 import {
   ArrowRight,
-  ArrowLeft,
   Facebook,
   Instagram,
   Twitter,
@@ -17,36 +15,44 @@ import {
 
 export default function Index() {
   const [email, setEmail] = useState("");
-  const [serviceEmblaRef, serviceEmblaApi] = useEmblaCarousel({
-    align: 'center',
-    containScroll: 'trimSnaps',
-    slidesToScroll: 1
-  });
-  const [projectEmblaRef, projectEmblaApi] = useEmblaCarousel({
-    align: 'start',
-    containScroll: 'trimSnaps',
-    slidesToScroll: 1,
-    breakpoints: {
-      '(min-width: 768px)': { slidesToScroll: 2 },
-      '(min-width: 1024px)': { slidesToScroll: 3 }
+  const serviceCarouselRef = useRef<HTMLDivElement>(null);
+  const projectCarouselRef = useRef<HTMLDivElement>(null);
+
+  const scrollServicePrev = () => {
+    if (serviceCarouselRef.current) {
+      serviceCarouselRef.current.scrollBy({
+        left: -320,
+        behavior: 'smooth'
+      });
     }
-  });
+  };
 
-  const scrollServicePrev = useCallback(() => {
-    if (serviceEmblaApi) serviceEmblaApi.scrollPrev();
-  }, [serviceEmblaApi]);
+  const scrollServiceNext = () => {
+    if (serviceCarouselRef.current) {
+      serviceCarouselRef.current.scrollBy({
+        left: 320,
+        behavior: 'smooth'
+      });
+    }
+  };
 
-  const scrollServiceNext = useCallback(() => {
-    if (serviceEmblaApi) serviceEmblaApi.scrollNext();
-  }, [serviceEmblaApi]);
+  const scrollProjectPrev = () => {
+    if (projectCarouselRef.current) {
+      projectCarouselRef.current.scrollBy({
+        left: -320,
+        behavior: 'smooth'
+      });
+    }
+  };
 
-  const scrollProjectPrev = useCallback(() => {
-    if (projectEmblaApi) projectEmblaApi.scrollPrev();
-  }, [projectEmblaApi]);
-
-  const scrollProjectNext = useCallback(() => {
-    if (projectEmblaApi) projectEmblaApi.scrollNext();
-  }, [projectEmblaApi]);
+  const scrollProjectNext = () => {
+    if (projectCarouselRef.current) {
+      projectCarouselRef.current.scrollBy({
+        left: 320,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
