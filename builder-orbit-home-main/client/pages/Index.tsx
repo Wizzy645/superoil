@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import {
   ArrowRight,
+  ArrowLeft,
   Facebook,
   Instagram,
   Twitter,
@@ -9,10 +11,42 @@ import {
   Globe,
   Phone,
   MapPin,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 export default function Index() {
   const [email, setEmail] = useState("");
+  const [serviceEmblaRef, serviceEmblaApi] = useEmblaCarousel({
+    align: 'center',
+    containScroll: 'trimSnaps',
+    slidesToScroll: 1
+  });
+  const [projectEmblaRef, projectEmblaApi] = useEmblaCarousel({
+    align: 'start',
+    containScroll: 'trimSnaps',
+    slidesToScroll: 1,
+    breakpoints: {
+      '(min-width: 768px)': { slidesToScroll: 2 },
+      '(min-width: 1024px)': { slidesToScroll: 3 }
+    }
+  });
+
+  const scrollServicePrev = useCallback(() => {
+    if (serviceEmblaApi) serviceEmblaApi.scrollPrev();
+  }, [serviceEmblaApi]);
+
+  const scrollServiceNext = useCallback(() => {
+    if (serviceEmblaApi) serviceEmblaApi.scrollNext();
+  }, [serviceEmblaApi]);
+
+  const scrollProjectPrev = useCallback(() => {
+    if (projectEmblaApi) projectEmblaApi.scrollPrev();
+  }, [projectEmblaApi]);
+
+  const scrollProjectNext = useCallback(() => {
+    if (projectEmblaApi) projectEmblaApi.scrollNext();
+  }, [projectEmblaApi]);
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -110,65 +144,127 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Service Cards Overlay */}
+        {/* Service Cards Carousel Overlay */}
         <div className="absolute top-[527px] left-1/2 transform -translate-x-1/2 w-full max-w-6xl px-8 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Oil Extraction Card */}
-            <div className="bg-white text-center w-72 overflow-hidden">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/917c2e8db40b350608c1932347a054662f563488?width=751"
-                alt="Oil Extraction"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-3 uppercase">
-                  Oil Extraction
-                </h3>
-                <p className="text-black text-sm leading-relaxed">
-                  As the world's largest green and clean energy specialist of
-                  the printing and typesetting industry. Lorem has been the
-                  industry.
-                </p>
+          <div className="relative">
+            {/* Service Carousel */}
+            <div className="overflow-hidden" ref={serviceEmblaRef}>
+              <div className="flex">
+                {/* Oil Extraction Card */}
+                <div className="flex-none w-72 mx-3">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/917c2e8db40b350608c1932347a054662f563488?width=751"
+                      alt="Oil Extraction"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-black mb-3 uppercase">
+                        Oil Extraction
+                      </h3>
+                      <p className="text-black text-sm leading-relaxed">
+                        As the world's largest green and clean energy specialist of
+                        the printing and typesetting industry. Lorem has been the
+                        industry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Pipelines Building Card */}
+                <div className="flex-none w-72 mx-3">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/d335c9a17b2b6891d555bdbd58dfe146dc1ad382?width=749"
+                      alt="Pipelines Building"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-black mb-3 uppercase">
+                        Pipelines Building
+                      </h3>
+                      <p className="text-black text-sm leading-relaxed">
+                        As the world's largest green and clean energy specialist of
+                        the printing and typesetting industry. Lorem has been the
+                        industry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Oil Refinement Card */}
+                <div className="flex-none w-72 mx-3">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/1db2cc0680337e8a3edbfec599a2945f2bf4d880?width=751"
+                      alt="Oil Refinement"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-black mb-3 uppercase">
+                        Oil Refinement
+                      </h3>
+                      <p className="text-black text-sm leading-relaxed">
+                        As the world's largest green and clean energy specialist of
+                        the printing and typesetting industry. Lorem has been the
+                        industry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Additional Service Cards */}
+                <div className="flex-none w-72 mx-3">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/917c2e8db40b350608c1932347a054662f563488?width=751"
+                      alt="Energy Consulting"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-black mb-3 uppercase">
+                        Energy Consulting
+                      </h3>
+                      <p className="text-black text-sm leading-relaxed">
+                        Expert consultation services to optimize your energy infrastructure and maximize efficiency across all operations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex-none w-72 mx-3">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/d335c9a17b2b6891d555bdbd58dfe146dc1ad382?width=749"
+                      alt="Renewable Solutions"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-black mb-3 uppercase">
+                        Renewable Solutions
+                      </h3>
+                      <p className="text-black text-sm leading-relaxed">
+                        Sustainable energy solutions including solar, wind, and hydro power systems for a cleaner future.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Pipelines Building Card */}
-            <div className="bg-white text-center w-72 overflow-hidden">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/d335c9a17b2b6891d555bdbd58dfe146dc1ad382?width=749"
-                alt="Pipelines Building"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-3 uppercase">
-                  Pipelines Building
-                </h3>
-                <p className="text-black text-sm leading-relaxed">
-                  As the world's largest green and clean energy specialist of
-                  the printing and typesetting industry. Lorem has been the
-                  industry.
-                </p>
-              </div>
-            </div>
-
-            {/* Oil Refinement Card */}
-            <div className="bg-white text-center w-72 overflow-hidden">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/1db2cc0680337e8a3edbfec599a2945f2bf4d880?width=751"
-                alt="Oil Refinement"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-black mb-3 uppercase">
-                  Oil Refinement
-                </h3>
-                <p className="text-black text-sm leading-relaxed">
-                  As the world's largest green and clean energy specialist of
-                  the printing and typesetting industry. Lorem has been the
-                  industry.
-                </p>
-              </div>
-            </div>
+            {/* Service Carousel Navigation */}
+            <button
+              onClick={scrollServicePrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors z-10"
+            >
+              <ChevronLeft className="w-6 h-6 text-energy-dark" />
+            </button>
+            <button
+              onClick={scrollServiceNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors z-10"
+            >
+              <ChevronRight className="w-6 h-6 text-energy-dark" />
+            </button>
           </div>
         </div>
 
@@ -187,37 +283,98 @@ export default function Index() {
       {/* Projects Section */}
       <section id="projects" className="py-16 bg-energy-dark mt-[300px]">
         <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
-          <div className="flex items-center mb-12">
-            <h2 className="text-white text-4xl font-medium">Our Projects</h2>
-            <div className="w-14 h-1 bg-energy-yellow-dark ml-4"></div>
+          <div className="flex items-center justify-between mb-12">
+            <div className="flex items-center">
+              <h2 className="text-white text-4xl font-medium">Our Projects</h2>
+              <div className="w-14 h-1 bg-energy-yellow-dark ml-4"></div>
+            </div>
+
+            {/* Project Carousel Navigation */}
+            <div className="flex items-center space-x-3">
+              <button
+                onClick={scrollProjectPrev}
+                className="w-12 h-12 bg-energy-yellow rounded-full flex items-center justify-center hover:bg-energy-yellow-dark transition-colors"
+              >
+                <ChevronLeft className="w-6 h-6 text-energy-dark" />
+              </button>
+              <button
+                onClick={scrollProjectNext}
+                className="w-12 h-12 bg-energy-yellow rounded-full flex items-center justify-center hover:bg-energy-yellow-dark transition-colors"
+              >
+                <ChevronRight className="w-6 h-6 text-energy-dark" />
+              </button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              "https://api.builder.io/api/v1/image/assets/TEMP/48bc919086a1514ff55f1eb94121935346dba033?width=615",
-              "https://api.builder.io/api/v1/image/assets/TEMP/786b04b1cbf7572518d4a3f61fa5661054293053?width=615",
-              "https://api.builder.io/api/v1/image/assets/TEMP/577dd626e0b8cd0c65801a73239c14a6918163bc?width=615",
-              "https://api.builder.io/api/v1/image/assets/TEMP/926790a377e25fb369addd651e2374ac9a107fe3?width=615",
-            ].map((imageSrc, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-lg"
-              >
-                <img
-                  src={imageSrc}
-                  alt="Project"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    Frozen Trees In A Lake
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    DESIGN- INTERIOR OFFICE
-                  </p>
+          {/* Project Carousel */}
+          <div className="overflow-hidden" ref={projectEmblaRef}>
+            <div className="flex">
+              {[
+                {
+                  image: "https://api.builder.io/api/v1/image/assets/TEMP/48bc919086a1514ff55f1eb94121935346dba033?width=615",
+                  title: "Offshore Wind Farm",
+                  category: "RENEWABLE ENERGY"
+                },
+                {
+                  image: "https://api.builder.io/api/v1/image/assets/TEMP/786b04b1cbf7572518d4a3f61fa5661054293053?width=615",
+                  title: "Solar Power Plant",
+                  category: "SOLAR TECHNOLOGY"
+                },
+                {
+                  image: "https://api.builder.io/api/v1/image/assets/TEMP/577dd626e0b8cd0c65801a73239c14a6918163bc?width=615",
+                  title: "Pipeline Infrastructure",
+                  category: "OIL & GAS"
+                },
+                {
+                  image: "https://api.builder.io/api/v1/image/assets/TEMP/926790a377e25fb369addd651e2374ac9a107fe3?width=615",
+                  title: "Hydroelectric Dam",
+                  category: "HYDRO POWER"
+                },
+                {
+                  image: "https://api.builder.io/api/v1/image/assets/TEMP/48bc919086a1514ff55f1eb94121935346dba033?width=615",
+                  title: "Geothermal Plant",
+                  category: "GEOTHERMAL ENERGY"
+                },
+                {
+                  image: "https://api.builder.io/api/v1/image/assets/TEMP/786b04b1cbf7572518d4a3f61fa5661054293053?width=615",
+                  title: "Energy Storage Facility",
+                  category: "BATTERY TECHNOLOGY"
+                }
+              ].map((project, index) => (
+                <div
+                  key={index}
+                  className="flex-none w-72 mx-3 lg:w-80"
+                >
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div className="p-6">
+                      <div className="mb-2">
+                        <span className="text-xs font-semibold text-energy-orange bg-energy-yellow/20 px-2 py-1 rounded-full">
+                          {project.category}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-black mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4">
+                        Innovative energy solutions designed for maximum efficiency and sustainability.
+                      </p>
+                      <button className="text-energy-orange font-semibold hover:text-energy-yellow transition-colors flex items-center space-x-1">
+                        <span>Learn More</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
