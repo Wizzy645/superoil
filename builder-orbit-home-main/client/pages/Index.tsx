@@ -161,7 +161,7 @@ export default function Index() {
             >
               <div className="flex space-x-6" style={{ width: 'max-content' }}>
                 {/* Oil Extraction Card */}
-                <div className="flex-none w-72 mx-3">
+                <div className="flex-none w-72">
                   <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/917c2e8db40b350608c1932347a054662f563488?width=751"
