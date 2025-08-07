@@ -409,15 +409,15 @@ export default function Index() {
         </div>
 
         {/* Hero Pagination Dots */}
-        <div className="hero-pagination absolute bottom-8 sm:bottom-12 lg:bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 sm:space-x-3">
+        <div className="hero-pagination absolute bottom-6 sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16 2xl:bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-1.5 sm:space-x-2 md:space-x-2.5 lg:space-x-3 xl:space-x-4">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentHeroSlide(index)}
               className={`pagination-dot rounded-full border border-white sm:border-2 transition-all duration-300 hover:scale-110 ${
                 index === currentHeroSlide
-                  ? 'w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 bg-energy-yellow'
-                  : 'w-2 h-2 sm:w-3 sm:h-3 hover:bg-white/20'
+                  ? 'w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 bg-energy-yellow'
+                  : 'w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 hover:bg-white/20'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
