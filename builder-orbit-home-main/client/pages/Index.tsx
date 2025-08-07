@@ -421,7 +421,7 @@ export default function Index() {
         </div>
 
         {/* Hero Pagination Dots */}
-        <div className="hero-pagination absolute top-[358px] sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16 2xl:bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-1.5 sm:space-x-2 md:space-x-2.5 lg:space-x-3 xl:space-x-4">
+        <div className="hero-pagination absolute top-[449px] sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16 2xl:bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-1.5 sm:space-x-2 md:space-x-2.5 lg:space-x-3 xl:space-x-4">
           {heroSlides.map((_, index) => (
             <button
               key={index}
