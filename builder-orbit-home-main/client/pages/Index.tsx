@@ -263,7 +263,7 @@ export default function Index() {
           <div className="max-w-2xl md:max-w-3xl xl:max-w-4xl">
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8 transition-all duration-500">
               {heroSlides[currentHeroSlide].title}{" "}
-              <span className="text-energy-yellow">{heroSlides[currentHeroSlide].highlight}</span>
+              <span className="text-energy-yellow lg:ml-0 max-lg:ml-[9px]">{heroSlides[currentHeroSlide].highlight}</span>
             </h1>
             <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-5 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-10 leading-relaxed transition-all duration-500">
               {heroSlides[currentHeroSlide].description}
