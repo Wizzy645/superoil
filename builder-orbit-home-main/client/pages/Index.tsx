@@ -311,20 +311,6 @@ export default function Index() {
       {/* Services Section */}
       <section id="services" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-7xl">
-          {/* Section Header */}
-          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-            <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-energy-yellow/20 rounded-full mb-4 sm:mb-6">
-              <span className="text-energy-orange font-semibold text-sm sm:text-base">Our Services</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-energy-dark leading-tight mb-4 sm:mb-6">
-              Comprehensive Energy
-              <span className="text-energy-orange"> Solutions</span>
-            </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              From traditional oil and gas operations to cutting-edge renewable energy systems, we deliver expert solutions across the entire energy spectrum.
-            </p>
-          </div>
-
           {/* Service Carousel Container */}
           <div className="service-carousel-container relative">
             {/* Service Carousel */}
