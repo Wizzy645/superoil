@@ -247,40 +247,40 @@ export default function Index() {
         }}
       >
         {/* Hero Content */}
-        <div className="hero-content container mx-auto px-4 sm:px-8 lg:px-16 max-w-6xl py-16 sm:py-0">
-          <div className="max-w-2xl">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 transition-all duration-500">
+        <div className="hero-content container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-7xl py-12 sm:py-16 md:py-0">
+          <div className="max-w-2xl md:max-w-3xl xl:max-w-4xl">
+            <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8 transition-all duration-500">
               {heroSlides[currentHeroSlide].title}{" "}
               <span className="text-energy-yellow">{heroSlides[currentHeroSlide].highlight}</span>
             </h1>
-            <p className="text-white text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 leading-relaxed transition-all duration-500">
+            <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-5 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-10 leading-relaxed transition-all duration-500">
               {heroSlides[currentHeroSlide].description}
             </p>
-            <button className="flex items-center gap-2 bg-energy-yellow text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-lg sm:text-xl hover:bg-energy-yellow-dark transition-colors shadow-lg">
+            <button className="flex items-center gap-2 bg-energy-yellow text-black px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10 py-2.5 sm:py-3 md:py-3.5 lg:py-4 xl:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl hover:bg-energy-yellow-dark transition-colors shadow-lg">
               Contact us
-              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" />
             </button>
 
             {/* Social Media Icons */}
-            <div className="social-media-links flex items-center gap-4 sm:gap-6 mt-6 sm:mt-8">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center">
-                <Facebook className="w-5 h-5 sm:w-6 sm:h-6 text-energy-orange" />
+            <div className="social-media-links flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-7 mt-5 sm:mt-6 md:mt-7 lg:mt-8 xl:mt-10">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-white rounded-full flex items-center justify-center">
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-energy-orange" />
               </div>
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center">
-                <Instagram className="w-5 h-5 sm:w-6 sm:h-6 text-energy-orange" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-white rounded-full flex items-center justify-center">
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-energy-orange" />
               </div>
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center">
-                <Twitter className="w-5 h-5 sm:w-6 sm:h-6 text-energy-orange" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-white rounded-full flex items-center justify-center">
+                <Twitter className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-energy-orange" />
               </div>
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center">
-                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-energy-orange" />
+              <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-white rounded-full flex items-center justify-center">
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-energy-orange" />
               </div>
             </div>
           </div>
         </div>
 
         {/* Service Cards Overlay - Integrated Part of Hero Group */}
-        <div className="service-cards-overlay absolute top-[400px] sm:top-[480px] lg:top-[527px] left-1/2 transform -translate-x-1/2 w-full max-w-6xl px-4 sm:px-8 lg:px-16">
+        <div className="service-cards-overlay absolute top-[350px] sm:top-[420px] md:top-[460px] lg:top-[500px] xl:top-[580px] 2xl:top-[650px] left-1/2 transform -translate-x-1/2 w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
           <div className="service-carousel-container relative">
             {/* Service Carousel */}
             <div
