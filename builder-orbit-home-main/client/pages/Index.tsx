@@ -69,7 +69,13 @@ export default function Index() {
 
   const scrollServicePrev = () => {
     if (serviceCarouselRef.current) {
-      const scrollAmount = window.innerWidth < 768 ? 280 : 320;
+      let scrollAmount = 280; // Mobile default
+      if (window.innerWidth >= 1536) scrollAmount = 408; // 2xl: w-96 + spacing
+      else if (window.innerWidth >= 1280) scrollAmount = 376; // xl: w-88 + spacing
+      else if (window.innerWidth >= 1024) scrollAmount = 344; // lg: w-80 + spacing
+      else if (window.innerWidth >= 768) scrollAmount = 308; // md: w-72 + spacing
+      else if (window.innerWidth >= 640) scrollAmount = 280; // sm: w-64 + spacing
+
       serviceCarouselRef.current.scrollBy({
         left: -scrollAmount,
         behavior: 'smooth'
@@ -79,7 +85,13 @@ export default function Index() {
 
   const scrollServiceNext = () => {
     if (serviceCarouselRef.current) {
-      const scrollAmount = window.innerWidth < 768 ? 280 : 320;
+      let scrollAmount = 280; // Mobile default
+      if (window.innerWidth >= 1536) scrollAmount = 408; // 2xl: w-96 + spacing
+      else if (window.innerWidth >= 1280) scrollAmount = 376; // xl: w-88 + spacing
+      else if (window.innerWidth >= 1024) scrollAmount = 344; // lg: w-80 + spacing
+      else if (window.innerWidth >= 768) scrollAmount = 308; // md: w-72 + spacing
+      else if (window.innerWidth >= 640) scrollAmount = 280; // sm: w-64 + spacing
+
       serviceCarouselRef.current.scrollBy({
         left: scrollAmount,
         behavior: 'smooth'
