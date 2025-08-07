@@ -292,7 +292,7 @@ export default function Index() {
         </div>
 
         {/* Service Cards Overlay - Integrated Part of Hero Group */}
-        <div className="service-cards-overlay absolute top-[518px] left-[3px] sm:top-[420px] sm:left-1/2 sm:transform sm:-translate-x-1/2 md:top-[460px] lg:top-[500px] xl:top-[580px] 2xl:top-[650px] max-lg:!top-[542px] w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+        <div className="service-cards-overlay absolute top-[518px] left-[3px] sm:top-[420px] sm:left-1/2 sm:transform sm:-translate-x-1/2 md:top-[460px] lg:top-[500px] lg:left-[591px] lg:transform-none xl:top-[580px] 2xl:top-[650px] max-lg:!top-[542px] w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
           <div className="service-carousel-container relative">
             {/* Service Carousel */}
             <div
