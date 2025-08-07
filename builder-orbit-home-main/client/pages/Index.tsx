@@ -250,9 +250,9 @@ export default function Index() {
         </div>
       </nav>
 
-      {/* Hero with Services Group */}
+      {/* Hero Section */}
       <section
-        className="hero-services-group relative min-h-screen sm:h-screen flex items-center justify-start bg-cover bg-center transition-all duration-500"
+        className="hero-section relative min-h-screen sm:h-screen flex items-center justify-start bg-cover bg-center transition-all duration-500"
         style={{
           backgroundImage:
             `linear-gradient(0deg, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), linear-gradient(105deg, rgba(0, 0, 0, 0.50) 41.07%, rgba(0, 0, 0, 0.35) 102.67%), url("${heroSlides[currentHeroSlide].backgroundImage}")`,
@@ -291,8 +291,27 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Service Cards Overlay - Integrated Part of Hero Group */}
-        <div className="service-cards-overlay absolute top-[518px] left-[3px] sm:top-[420px] sm:left-1/2 sm:transform sm:-translate-x-1/2 md:top-[460px] lg:top-[501px] lg:left-0 lg:transform-none xl:top-[580px] 2xl:top-[650px] max-lg:!top-[542px] w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+        {/* Hero Pagination Dots */}
+        <div className="hero-pagination absolute bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16 2xl:bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-1.5 sm:space-x-2 md:space-x-2.5 lg:space-x-3 xl:space-x-4">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentHeroSlide(index)}
+              className={`pagination-dot rounded-full border border-white sm:border-2 transition-all duration-300 hover:scale-110 ${
+                index === currentHeroSlide
+                  ? 'w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 bg-energy-yellow'
+                  : 'w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 hover:bg-white/20'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-7xl">
+          {/* Service Carousel Container */}
           <div className="service-carousel-container relative">
             {/* Service Carousel */}
             <div
@@ -419,26 +438,10 @@ export default function Index() {
             </button>
           </div>
         </div>
-
-        {/* Hero Pagination Dots */}
-        <div className="hero-pagination absolute top-[406px] sm:bottom-8 md:bottom-10 lg:bottom-12 xl:bottom-16 2xl:bottom-20 left-1/2 transform -translate-x-1/2 flex items-center space-x-1.5 sm:space-x-2 md:space-x-2.5 lg:space-x-3 xl:space-x-4">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentHeroSlide(index)}
-              className={`pagination-dot rounded-full border border-white sm:border-2 transition-all duration-300 hover:scale-110 ${
-                index === currentHeroSlide
-                  ? 'w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8 bg-energy-yellow'
-                  : 'w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 hover:bg-white/20'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-12 sm:py-16 bg-energy-dark mt-[200px] sm:mt-[250px] lg:mt-[300px]">
+      <section id="projects" className="py-12 sm:py-16 bg-energy-dark">
         <div className="container mx-auto px-4 sm:px-8 lg:px-16 max-w-6xl">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <div className="flex items-center">
