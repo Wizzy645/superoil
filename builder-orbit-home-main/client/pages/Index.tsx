@@ -310,14 +310,14 @@ export default function Index() {
 
       {/* Services Section */}
       <section id="services" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-7xl" style={{ top: '10px', margin: '-3px auto 0' }}>
           {/* Service Carousel Container */}
           <div className="service-carousel-container relative">
             {/* Service Carousel */}
             <div
               className="service-carousel overflow-x-auto scrollbar-hide pb-3 sm:pb-4 md:pb-5 lg:pb-6"
               ref={serviceCarouselRef}
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', marginTop: '-2px' }}
             >
               <div className="service-cards-wrapper flex space-x-3 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-7 2xl:space-x-8" style={{ width: 'max-content' }}>
                 {/* Oil Extraction Service Card */}
