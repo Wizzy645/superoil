@@ -260,7 +260,7 @@ export default function Index() {
       >
         {/* Hero Content */}
         <div className="hero-content container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-7xl py-12 sm:py-16 md:py-0">
-          <div className="max-w-2xl md:max-w-3xl xl:max-w-4xl">
+          <div className="max-w-2xl md:max-w-3xl xl:max-w-4xl" style={{ marginTop: "-60px" }}>
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8 transition-all duration-500">
               {heroSlides[currentHeroSlide].title}{" "}
               <span className="text-energy-yellow ml-[13px]">{heroSlides[currentHeroSlide].highlight}</span>
@@ -292,7 +292,7 @@ export default function Index() {
         </div>
 
         {/* Hero Pagination Dots */}
-        <div className="hero-pagination absolute bottom-2 md:bottom-3 lg:bottom-4 xl:bottom-5 2xl:bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-1.5 sm:space-x-2 md:space-x-2.5 lg:space-x-3 xl:space-x-4" style={{ top: "350.323px" }}>
+        <div className="hero-pagination absolute bottom-2 md:bottom-3 lg:bottom-4 xl:bottom-5 2xl:bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-1.5 sm:space-x-2 md:space-x-2.5 lg:space-x-3 xl:space-x-4" style={{ top: "340.323px" }}>
           {heroSlides.map((_, index) => (
             <button
               key={index}
@@ -317,7 +317,7 @@ export default function Index() {
             <div
               className="service-carousel overflow-x-auto scrollbar-hide pb-3 sm:pb-4 md:pb-5 lg:pb-6"
               ref={serviceCarouselRef}
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', marginTop: '-150px' }}
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', marginTop: '-100px' }}
             >
               <div className="service-cards-wrapper flex space-x-3 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-7 2xl:space-x-8" style={{ width: 'max-content' }}>
                 {/* Oil Extraction Service Card */}
