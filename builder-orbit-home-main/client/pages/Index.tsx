@@ -317,7 +317,7 @@ export default function Index() {
             <div
               className="service-carousel overflow-x-auto scrollbar-hide pb-3 sm:pb-4 md:pb-5 lg:pb-6"
               ref={serviceCarouselRef}
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', marginTop: '-2px' }}
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', marginTop: '-150px' }}
             >
               <div className="service-cards-wrapper flex space-x-3 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-7 2xl:space-x-8" style={{ width: 'max-content' }}>
                 {/* Oil Extraction Service Card */}
