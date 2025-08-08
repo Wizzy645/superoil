@@ -441,7 +441,7 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-12 sm:py-16 bg-energy-dark" style={{ marginTop: "-98px" }}>
+      <section id="projects" className="py-12 sm:py-16 bg-energy-dark mt-2 sm:-mt-12">
         <div className="container mx-auto px-4 sm:px-8 lg:px-16 max-w-6xl">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <div className="flex items-center">
