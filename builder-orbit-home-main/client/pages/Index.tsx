@@ -349,11 +349,11 @@ export default function Index() {
                       alt="Pipelines Building"
                       className="w-full h-36 sm:h-40 md:h-44 lg:h-48 xl:h-52 2xl:h-56 object-cover"
                     />
-                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex-1 flex flex-col">
                       <h3 className="service-title text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-black mb-2 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-4 uppercase">
                         Pipelines Building
                       </h3>
-                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed">
+                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed flex-1">
                         As the world's largest green and clean energy specialist of
                         the printing and typesetting industry. Lorem has been the
                         industry.
