@@ -322,7 +322,7 @@ export default function Index() {
               <div className="service-cards-wrapper flex space-x-3 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-7 2xl:space-x-8" style={{ width: 'max-content' }}>
                 {/* Oil Extraction Service Card */}
                 <div className="service-card flex-none w-56 sm:w-64 md:w-72 lg:w-80 xl:w-88 2xl:w-96">
-                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/917c2e8db40b350608c1932347a054662f563488?width=751"
                       alt="Oil Extraction"
