@@ -364,7 +364,7 @@ export default function Index() {
 
                 {/* Oil Refinement Service Card */}
                 <div className="service-card flex-none w-56 sm:w-64 md:w-72 lg:w-80 xl:w-88 2xl:w-96">
-                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/1db2cc0680337e8a3edbfec599a2945f2bf4d880?width=751"
                       alt="Oil Refinement"
