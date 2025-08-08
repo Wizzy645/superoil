@@ -322,17 +322,17 @@ export default function Index() {
               <div className="service-cards-wrapper flex space-x-3 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-7 2xl:space-x-8" style={{ width: 'max-content' }}>
                 {/* Oil Extraction Service Card */}
                 <div className="service-card flex-none w-56 sm:w-64 md:w-72 lg:w-80 xl:w-88 2xl:w-96">
-                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/917c2e8db40b350608c1932347a054662f563488?width=751"
                       alt="Oil Extraction"
                       className="w-full h-36 sm:h-40 md:h-44 lg:h-48 xl:h-52 2xl:h-56 object-cover"
                     />
-                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex-1 flex flex-col">
                       <h3 className="service-title text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-black mb-2 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-4 uppercase">
                         Oil Extraction
                       </h3>
-                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed">
+                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed flex-1">
                         As the world's largest green and clean energy specialist of
                         the printing and typesetting industry. Lorem has been the
                         industry.
@@ -343,17 +343,17 @@ export default function Index() {
 
                 {/* Pipelines Building Service Card */}
                 <div className="service-card flex-none w-56 sm:w-64 md:w-72 lg:w-80 xl:w-88 2xl:w-96">
-                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/d335c9a17b2b6891d555bdbd58dfe146dc1ad382?width=749"
                       alt="Pipelines Building"
                       className="w-full h-36 sm:h-40 md:h-44 lg:h-48 xl:h-52 2xl:h-56 object-cover"
                     />
-                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex-1 flex flex-col">
                       <h3 className="service-title text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-black mb-2 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-4 uppercase">
                         Pipelines Building
                       </h3>
-                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed">
+                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed flex-1">
                         As the world's largest green and clean energy specialist of
                         the printing and typesetting industry. Lorem has been the
                         industry.
@@ -364,17 +364,17 @@ export default function Index() {
 
                 {/* Oil Refinement Service Card */}
                 <div className="service-card flex-none w-56 sm:w-64 md:w-72 lg:w-80 xl:w-88 2xl:w-96">
-                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/1db2cc0680337e8a3edbfec599a2945f2bf4d880?width=751"
                       alt="Oil Refinement"
                       className="w-full h-36 sm:h-40 md:h-44 lg:h-48 xl:h-52 2xl:h-56 object-cover"
                     />
-                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex-1 flex flex-col">
                       <h3 className="service-title text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-black mb-2 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-4 uppercase">
                         Oil Refinement
                       </h3>
-                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed">
+                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed flex-1">
                         As the world's largest green and clean energy specialist of
                         the printing and typesetting industry. Lorem has been the
                         industry.
@@ -385,17 +385,17 @@ export default function Index() {
 
                 {/* Energy Consulting Service Card */}
                 <div className="service-card flex-none w-56 sm:w-64 md:w-72 lg:w-80 xl:w-88 2xl:w-96">
-                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/917c2e8db40b350608c1932347a054662f563488?width=751"
                       alt="Energy Consulting"
                       className="w-full h-36 sm:h-40 md:h-44 lg:h-48 xl:h-52 2xl:h-56 object-cover"
                     />
-                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex-1 flex flex-col">
                       <h3 className="service-title text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-black mb-2 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-4 uppercase">
                         Energy Consulting
                       </h3>
-                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed">
+                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed flex-1">
                         Expert consultation services to optimize your energy infrastructure and maximize efficiency across all operations.
                       </p>
                     </div>
@@ -404,17 +404,17 @@ export default function Index() {
 
                 {/* Renewable Solutions Service Card */}
                 <div className="service-card flex-none w-56 sm:w-64 md:w-72 lg:w-80 xl:w-88 2xl:w-96">
-                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white text-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/d335c9a17b2b6891d555bdbd58dfe146dc1ad382?width=749"
                       alt="Renewable Solutions"
                       className="w-full h-36 sm:h-40 md:h-44 lg:h-48 xl:h-52 2xl:h-56 object-cover"
                     />
-                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                    <div className="p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex-1 flex flex-col">
                       <h3 className="service-title text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-black mb-2 sm:mb-2 md:mb-3 lg:mb-3 xl:mb-4 uppercase">
                         Renewable Solutions
                       </h3>
-                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed">
+                      <p className="service-description text-black text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed flex-1">
                         Sustainable energy solutions including solar, wind, and hydro power systems for a cleaner future.
                       </p>
                     </div>
@@ -441,7 +441,7 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-12 sm:py-16 bg-energy-dark mt-2 sm:-mt-12">
+      <section id="projects" className="py-12 sm:py-16 bg-energy-dark -mt-10 sm:-mt-20">
         <div className="container mx-auto px-4 sm:px-8 lg:px-16 max-w-6xl">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <div className="flex items-center">
