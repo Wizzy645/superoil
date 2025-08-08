@@ -309,7 +309,7 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <section id="services" className="pb-12 sm:pb-16 lg:pb-20 bg-gray-50" style={{ marginTop: '-1px' }}>
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-7xl" style={{ top: '10px', margin: '-3px auto 0' }}>
           {/* Service Carousel Container */}
           <div className="service-carousel-container relative">
